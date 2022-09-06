@@ -23,7 +23,6 @@ namespace Mosa.Demo.Application
 			{
 				var pciDevice = device.DeviceDriver as PCIDevice;
 				Console.Write(device.Name);
-
 				Console.Write(": ");
 				Console.Write(pciDevice.VendorID.ToString("x"));
 				Console.Write(":");

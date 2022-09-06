@@ -204,7 +204,7 @@ namespace Mosa.Kernel.x86
 			Process();
 		}
 
-		internal static void Process()
+		public static void Process()
 		{
 			if (!enabled)
 				return;

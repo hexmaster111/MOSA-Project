@@ -75,7 +75,11 @@ namespace Mosa.Demo.SVGAWorld.x86
 			partitionService.CreatePartitionDevices();
 
 			foreach (var partition in DeviceService.GetDevices<IPartitionDevice>())
+			{
+				Console.WriteLine("Partition Name: " + partition.Name);
 				FileManager.Register(new FatFileSystem(partition.DeviceDriver as IPartitionDevice));
+			}
+
 
 			Display.DefaultFont = GeneralUtils.Load(FileManager.ReadAllBytes("font.bin"));
 
